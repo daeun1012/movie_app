@@ -9,6 +9,8 @@ class App extends Component {
   // Render : componentWillMount() -> render() -> componentDidMount()
   // Update : componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidMount()
 
+  state = {};
+
   /**
    * render() 후 불려지는 method
    */
@@ -52,7 +54,7 @@ class App extends Component {
   }
 
   render() {
-    const movies = this.state;
+    const { movies } = this.state;
     return (
       // data 확인 후 call method
       <div className={movies ? "App" : "App--loading"} >
